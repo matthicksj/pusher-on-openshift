@@ -21,10 +21,10 @@ $(function() {
     deg = bytesToDegrees(data.usage, data.limit);
     deg -= gauge_midpoint;
     rot = "rotate(" + deg + ", 335, 473)";
-    console.log(rot);
+    //console.log(rot);
     _this.gauge_ptr.stop().animate({
       svgTransform: rot
-    }, 1000);
+    }, 500);
     return memory_value.text(Math.floor(data.usage / 1048576));
   };
 //  interval = setInterval((function() {
@@ -49,11 +49,11 @@ $(function() {
   // Flash fallback logging - don't include this in production
   WEB_SOCKET_DEBUG = true;
 
-  var pusher = new Pusher('3c52860b0bac40947b4c');
-  var channel = pusher.subscribe('test_channel');
-  channel.bind('my_event', updateGauge);
+  var pusher = new Pusher(PUSHER_KEY);
+  var channel = pusher.subscribe(PUSHER_CHANNEL);
+  channel.bind(PUSHER_EVENT, updateGauge);
 
-  $(".ajax").click(function(event) {
+  $(".async").click(function(event) {
       event.preventDefault();
       var url = $(this).attr('href');
       $.get(url);
