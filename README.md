@@ -9,8 +9,11 @@ on the client side that updates real-time.
 Credits
 --------------------
 PusherApp - http://pusherapp.com
+
 SVG Plugin - http://keith-wood.name
+
 JQuery - http://jquery.com
+
 Rails - http://rubyonrails.org
 
 Running on OpenShift
@@ -24,7 +27,7 @@ Create a rails application
 
 Add this upstream example repo
 
-    cd railsapp
+    cd websockets
     git remote add upstream -m master git://github.com/matthicksj/pusher-on-openshift.git
     git pull -s recursive -X theirs upstream master
 
@@ -38,4 +41,4 @@ Then push the repo upstream
 
 That's it, you can now checkout your application at:
 
-    http://websockets-$yourlogin.rhcloud.com
+    http://websockets-$yourdomain.rhcloud.com

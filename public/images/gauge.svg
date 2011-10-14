@@ -477,15 +477,14 @@
        d="m 332.80525,291.30269 0,169.125 c -5.68587,1.01081 -10,5.96125 -10,11.9375 0,6.70631 5.41869,12.15625 12.125,12.15625 6.70632,0 12.15625,-5.44994 12.15625,-12.15625 0,-5.97625 -4.31412,-10.92669 -10,-11.9375 l 0,-169.125 -4.28125,0 z"
        id="gauge_pointer"
        style="fill:#ff6600;fill-opacity:0.89035088;stroke:none"
-       transform="rotate(0, 335, 473)"
+       transform="rotate(-135, 335, 473)"
       />
     <rect
        width="645.48749"
        height="168.69548"
        x="5.0507593"
        y="436.16913"
-       mask="url(#mask3992)"
        id="rect3870"
-       style="fill:url(#linearGradient3916);fill-opacity:1;stroke:none" />
+       style="fill:url(#linearGradient3916);fill-opacity:.5;stroke:none" />
   </g>
 </svg>

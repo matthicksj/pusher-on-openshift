@@ -4,6 +4,11 @@
     <meta charset='utf-8'>
     <title>Memory usage demo</title>
     <link rel="stylesheet" href="stylesheets/demo_style.css">
+    <script type="text/javascript">
+      PUSHER_KEY = 'YOUR PUSHER KEY'
+      PUSHER_CHANNEL = 'test_channel'
+      PUSHER_EVENT = 'my_event'
+    </script>
   </head>
   
   <body>
@@ -11,10 +16,12 @@
       <h1>Memory usage demo</h1>
     </header>
     
-    <a href='/start' class="ajax" id="stop">Start</a>
-    <a href='/stop' class="ajax" id="start">Stop</a>
-    <a href='/load' class="ajax" id="start">Eat Memory</a>
-    <a href='/clear' class="ajax" id="start">Free Memory</a>
+    <div id="links">
+      <a href='/start' class="async" id="stop">Start</a>
+      <a href='/stop' class="async" id="start">Stop</a>
+      <a href='/load' class="async" id="load">Eat Memory</a>
+      <a href='/clear' class="async" id="clear">Free Memory</a>
+    </div>
     
     <div id="memory_usage"><span class="value">0</span> MiB</div>
     
