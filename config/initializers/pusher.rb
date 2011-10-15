@@ -16,8 +16,8 @@ Pusher.secret = 'YOUR_SECRET'
 Thread.new do
   while true do
     if File.exists?("pusher.lock")
-      mem_limit = `rhc-cgroup-read memory.limit_in_bytes`
-      mem_usage = `rhc-cgroup-read memory.usage_in_bytes`
+      mem_limit = `rhc-cgroup-read memory.limit_in_bytes`.to_i
+      mem_usage = `rhc-cgroup-read memory.usage_in_bytes`.to_i
       response = ActiveSupport::JSON.encode({"limit" => mem_limit, "usage" => mem_usage})
       Pusher['test_channel'].trigger('my_event', response)
     end
